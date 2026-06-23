@@ -10,7 +10,10 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(
+    api_key=OPENAI_API_KEY,
+    base_url="https://integrate.api.nvidia.com/v1",
+)
 
 
 def extract_text_from_pdf(uploaded_file):
@@ -46,7 +49,6 @@ def ask_openai(prompt, max_tokens=500):
     
 
     response = client.chat.completions.create(
-        base_url = "https://integrate.api.nvidia.com/v1"
         model="openai/gpt-oss-120b",
         
         messages=[
