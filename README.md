@@ -224,6 +224,3 @@ Some resumes are image-based scans. PyMuPDF extracts embedded text, but it does 
 - Avoid logging raw resume content in production.
 - Review external job scraping provider terms and data usage policies before production deployment.
 
-## License
-
-No license file is currently included. Add a license before distributing or deploying this project publicly.
